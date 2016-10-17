@@ -45,10 +45,10 @@ iex> fruits = create_node("fruits")
 #inner node
 iex> apple = create_node("apple") |> add_attributes(
               %{color: "red", seeded: :true}
-            ) |> add_content("give it ot the doctor.")
-{:apple, [color: "red", seeded: true], [["give it ot the doctor."]]}
+            ) |> add_content("give it to the doctor.")
+{:apple, [color: "red", seeded: true], [["give it to the doctor."]]}
 
 iex> fruits |> add_content(apple) |> serialize 
-'<?xml version="1.0"?><fruits><apple color="red" seeded="true">give it ot the doctor.</apple></fruits>'
+'<?xml version="1.0"?><fruits><apple color="red" seeded="true">give it to the doctor.</apple></fruits>'
 
 ```
