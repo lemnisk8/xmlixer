@@ -25,9 +25,9 @@ The package can be installed as:
 ```elixir
 {Tag, %{Attribute}, [content]}
 ```
-Tag can be a string or an atom
-Attributes are Elixir Maps
-Content can be a string, tuple (XML node) or a List tuples
+Tag can be a string or an atom.   
+Attributes are Elixir Maps.   
+Content can be a string, tuple (XML node) or a List tuples.   
 
 ## Usage
 ```elixir

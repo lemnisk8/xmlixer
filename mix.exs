@@ -26,8 +26,8 @@ defmodule Xmlixer.Mixfile do
 
   defp package do
     [
-     name: :exmerl,
-     files: ["lib", "mix.exs", "README*"],
+     name: :xmlixer,
+     files: ["lib", "mix.exs", "README.md"],
      maintainers: ["Chintan Thakkar"],
      licenses: ["Apache 2.0"],
      links: %{"GitHub" => "https://github.com/lemnisk8/xmlixer"}]
