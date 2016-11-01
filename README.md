@@ -51,4 +51,11 @@ iex> apple = create_node("apple") |> add_attributes(
 iex> fruits |> add_content(apple) |> serialize 
 '<?xml version="1.0"?><fruits><apple color="red" seeded="true">give it to the doctor.</apple></fruits>'
 
+#adding xml declaration
+iex> prolog = ~s(<?xml version="1.0" encoding="UTF-8"?>)
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
+
+iex> fruits |> add_content(apple) |> serialize(prolog)
+'<?xml version="1.0" encoding="UTF-8"?><fruits><apple color="red" seeded="true">give it to the doctor.</apple></fruits>'
 ```
+
