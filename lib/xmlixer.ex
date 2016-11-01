@@ -1,10 +1,18 @@
 defmodule Xmlixer do
-def serialize(data) when is_list(data) do
+  def serialize(data) when is_list(data) do
     List.flatten(:xmerl.export_simple(data, :xmerl_xml))
   end
 
   def serialize(data) do
     List.flatten(:xmerl.export_simple([data], :xmerl_xml))
+  end
+
+  def serialize(data, prolog) when is_list(data) do
+    List.flatten(:xmerl.export_simple(data, :xmerl_xml, [{:prolog, prolog}]))
+  end
+
+  def serialize(data, prolog) do
+    List.flatten(:xmerl.export_simple([data], :xmerl_xml, [{:prolog, prolog}]))
   end
 
   def create_node(tag, attributes \\ %{}, content \\ [])
